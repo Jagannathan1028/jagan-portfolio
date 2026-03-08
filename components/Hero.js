@@ -7,19 +7,15 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
-
-      {/* Background Image Layer */}
-      <div
-        className="absolute inset-x-0 top-24 bottom-0
-                   bg-[length:140%] md:bg-cover
-                   bg-left md:bg-center
-                   bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-desktop.png')" }}
-      />
-
+   <section
+  className="min-h-screen flex items-center relative pt-24
+             bg-[length:140%] md:bg-cover
+             bg-left md:bg-center
+             bg-no-repeat"
+  style={{ backgroundImage: "url('/hero-desktop.png')" }}
+>
       {/* Dark Overlay */}
-      <div className="absolute inset-x-0 top-24 bottom-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-10 items-center">
