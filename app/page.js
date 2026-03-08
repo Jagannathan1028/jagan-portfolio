@@ -119,11 +119,11 @@ export default function Home(){
     {/* Project 3 */}
     <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
       <div className="overflow-hidden">
-        <img
-          src="/projects/portfolio_website.jpg"
-          alt="Portfolio Website"
-          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
-        />
+       <img
+  src="/grocery_website.png"
+  alt="Grocery Shopping Website"
+  className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+/>
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">Personal Portfolio Website</h3>
