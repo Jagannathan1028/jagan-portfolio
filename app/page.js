@@ -13,8 +13,8 @@ export default function Home(){
   
 
   <Section id="about" title="About Me">
-  <div className="max-w-3xl mx-auto px-6">
-    <p className="text-gray-300 leading-8 text-justify">
+  <div className="max-w-3xl md:max-w-5xl mx-auto px-6">
+    <p className="text-gray-300 leading-8 text-justify text-base md:text-lg">
       I am a Full Stack Developer with hands-on experience in designing and building enterprise-grade web applications. My expertise spans frontend engineering, backend services, and API integrations, enabling me to deliver complete, scalable solutions.
 
       <br /><br />
