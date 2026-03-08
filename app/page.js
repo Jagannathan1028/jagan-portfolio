@@ -81,55 +81,66 @@ export default function Home(){
   <div className="grid md:grid-cols-3 gap-8">
 
     {/* Project 1 */}
-    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
-      <div className="overflow-hidden">
-        <img
-          src="/projects/hospital_website.png"
-          alt="Hospital Website"
-          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">Hospital Management Website</h3>
-        <p className="text-gray-400 text-sm leading-6">
-          A healthcare web platform for managing appointments, patient records,
-          doctor schedules, and hospital services with a responsive interface.
+    <div className="relative h-80 rounded-2xl overflow-hidden group">
+      <img
+        src="/projects/hospital_website.png"
+        alt="Hospital Website"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+      />
+
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+      {/* Text Content */}
+      <div className="absolute bottom-0 p-6 z-10">
+        <h3 className="text-xl font-semibold mb-2 text-white">
+          Hospital Management Website
+        </h3>
+        <p className="text-gray-200 text-sm leading-6">
+          Healthcare platform for appointments, patient records, doctor schedules,
+          and hospital service management.
         </p>
       </div>
     </div>
 
     {/* Project 2 */}
-    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
-      <div className="overflow-hidden">
-        <img
-          src="/projects/grocery_website.png"
-          alt="Grocery Shopping Website"
-          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">Online Grocery Shopping Website</h3>
-        <p className="text-gray-400 text-sm leading-6">
-          An e-commerce grocery platform with product catalog, cart system,
-          secure checkout, and order tracking for seamless online shopping.
+    <div className="relative h-80 rounded-2xl overflow-hidden group">
+      <img
+        src="/projects/grocery_website.png"
+        alt="Grocery Shopping Website"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+      <div className="absolute bottom-0 p-6 z-10">
+        <h3 className="text-xl font-semibold mb-2 text-white">
+          Online Grocery Shopping Website
+        </h3>
+        <p className="text-gray-200 text-sm leading-6">
+          E-commerce grocery platform with product catalog, cart system,
+          secure checkout, and order tracking.
         </p>
       </div>
     </div>
 
     {/* Project 3 */}
-    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
-      <div className="overflow-hidden">
-        <img
-          src="/projects/portfolio_website.png"
-          alt="Portfolio Website"
-          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">Personal Portfolio Website</h3>
-        <p className="text-gray-400 text-sm leading-6">
-          A modern developer portfolio showcasing projects, technical skills,
-          and contact features with responsive design and smooth animations.
+    <div className="relative h-80 rounded-2xl overflow-hidden group">
+      <img
+        src="/projects/portfolio_website.png"
+        alt="Portfolio Website"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+      <div className="absolute bottom-0 p-6 z-10">
+        <h3 className="text-xl font-semibold mb-2 text-white">
+          Personal Portfolio Website
+        </h3>
+        <p className="text-gray-200 text-sm leading-6">
+          Modern developer portfolio showcasing projects, technical skills,
+          and integrated contact features.
         </p>
       </div>
     </div>
