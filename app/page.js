@@ -78,12 +78,64 @@ export default function Home(){
 </Section>
 
   <Section id="projects" title="Projects">
-    <div className="grid md:grid-cols-3 gap-6">
-      {["LTA Approval System","Muster Roll Reporting","Enterprise HR Portal"].map(p=>(
-        <div key={p} className="p-6 bg-white/5 rounded-xl">{p}</div>
-      ))}
+  <div className="grid md:grid-cols-3 gap-8">
+
+    {/* Project 1 */}
+    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
+      <div className="overflow-hidden">
+        <img
+          src="/public/hospital_website.jpg"
+          alt="Hospital Website"
+          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">Hospital Management Website</h3>
+        <p className="text-gray-400 text-sm leading-6">
+          A healthcare web platform for managing appointments, patient records,
+          doctor schedules, and hospital services with a responsive interface.
+        </p>
+      </div>
     </div>
-  </Section>
+
+    {/* Project 2 */}
+    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
+      <div className="overflow-hidden">
+        <img
+          src="/projects/grocery_website.jpg"
+          alt="Grocery Shopping Website"
+          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">Online Grocery Shopping Website</h3>
+        <p className="text-gray-400 text-sm leading-6">
+          An e-commerce grocery platform with product catalog, cart system,
+          secure checkout, and order tracking for seamless online shopping.
+        </p>
+      </div>
+    </div>
+
+    {/* Project 3 */}
+    <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
+      <div className="overflow-hidden">
+        <img
+          src="/projects/portfolio_website.jpg"
+          alt="Portfolio Website"
+          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">Personal Portfolio Website</h3>
+        <p className="text-gray-400 text-sm leading-6">
+          A modern developer portfolio showcasing projects, technical skills,
+          and contact features with responsive design and smooth animations.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</Section>
       <WhatsAppButton />
   <Footer/>
  </>
