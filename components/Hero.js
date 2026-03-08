@@ -11,7 +11,7 @@ export default function Hero() {
   className="min-h-screen flex items-center relative"
   style={{
     backgroundImage: "url('/hero-desktop.png')",
-    backgroundSize: "contain",      // show full image
+    // backgroundSize: "contain",      // show full image
     backgroundPosition: "center top", // keep image below navbar
     backgroundRepeat: "no-repeat",
     paddingTop: "96px"              // navbar height space (adjust if needed)
