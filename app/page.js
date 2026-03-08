@@ -84,7 +84,7 @@ export default function Home(){
     <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
       <div className="overflow-hidden">
         <img
-          src="/public/hospital_website.jpg"
+          src="/projects/hospital_website.png"
           alt="Hospital Website"
           className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
         />
@@ -102,7 +102,7 @@ export default function Home(){
     <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
       <div className="overflow-hidden">
         <img
-          src="/projects/grocery_website.jpg"
+          src="/projects/grocery_website.png"
           alt="Grocery Shopping Website"
           className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
         />
@@ -119,11 +119,11 @@ export default function Home(){
     {/* Project 3 */}
     <div className="bg-white/5 rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
       <div className="overflow-hidden">
-       <img
-  src="/grocery_website.png"
-  alt="Grocery Shopping Website"
-  className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
-/>
+        <img
+          src="/projects/portfolio_website.png"
+          alt="Portfolio Website"
+          className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+        />
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">Personal Portfolio Website</h3>
