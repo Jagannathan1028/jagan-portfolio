@@ -28,54 +28,7 @@ export default function Home(){
   </div>
 </Section>
 
-  <Section id="skills" title="Technical Skills">
-  <div className="grid md:grid-cols-2 gap-10">
-
-    {/* Frontend */}
-    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
-      <h3 className="text-xl font-semibold mb-4 text-accent">Frontend</h3>
-      <ul className="space-y-2 text-gray-300">
-        <li>Angular</li>
-        <li>TypeScript</li>
-        <li>HTML5 / CSS3</li>
-        <li>Responsive UI Design</li>
-      </ul>
-    </div>
-
-    {/* Backend */}
-    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
-      <h3 className="text-xl font-semibold mb-4 text-accent">Backend</h3>
-      <ul className="space-y-2 text-gray-300">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>.NET Core</li>
-        <li>REST API Development</li>
-      </ul>
-    </div>
-
-    {/* Database */}
-    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
-      <h3 className="text-xl font-semibold mb-4 text-accent">Database</h3>
-      <ul className="space-y-2 text-gray-300">
-        <li>SQL Server</li>
-        <li>MySQL</li>
-      </ul>
-    </div>
-
-    {/* Tools & Platforms */}
-    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
-      <h3 className="text-xl font-semibold mb-4 text-accent">Tools & Platforms</h3>
-      <ul className="space-y-2 text-gray-300">
-        <li>Git & GitHub</li>
-        <li>Postman</li>
-        <li>VS Code</li>
-        <li>Azure</li>
-        <li>Vercel Deployment</li>
-      </ul>
-    </div>
-
-  </div>
-</Section>
+  
 
   <Section id="projects" title="Projects">
   <div className="grid md:grid-cols-3 gap-8">
@@ -147,6 +100,56 @@ export default function Home(){
 
   </div>
 </Section>
+
+<Section id="skills" title="Technical Skills">
+  <div className="grid md:grid-cols-2 gap-10">
+
+    {/* Frontend */}
+    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
+      <h3 className="text-xl font-semibold mb-4 text-accent">Frontend</h3>
+      <ul className="space-y-2 text-gray-300">
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>HTML5 / CSS3</li>
+        <li>Responsive UI Design</li>
+      </ul>
+    </div>
+
+    {/* Backend */}
+    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
+      <h3 className="text-xl font-semibold mb-4 text-accent">Backend</h3>
+      <ul className="space-y-2 text-gray-300">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>.NET Core</li>
+        <li>REST API Development</li>
+      </ul>
+    </div>
+
+    {/* Database */}
+    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
+      <h3 className="text-xl font-semibold mb-4 text-accent">Database</h3>
+      <ul className="space-y-2 text-gray-300">
+        <li>SQL Server</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    {/* Tools & Platforms */}
+    <div className="p-8 bg-white/5 rounded-2xl hover:bg-white/10 hover:-translate-y-1 transition">
+      <h3 className="text-xl font-semibold mb-4 text-accent">Tools & Platforms</h3>
+      <ul className="space-y-2 text-gray-300">
+        <li>Git & GitHub</li>
+        <li>Postman</li>
+        <li>VS Code</li>
+        <li>Azure</li>
+        <li>Vercel Deployment</li>
+      </ul>
+    </div>
+
+  </div>
+</Section>
+
       <WhatsAppButton />
   <Footer/>
  </>
