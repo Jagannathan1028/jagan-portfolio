@@ -8,11 +8,14 @@ export default function Hero() {
 
   return (
    <section
-  className="min-h-screen flex items-center relative pt-24
-             bg-[length:140%] md:bg-cover
-             bg-left md:bg-center
-             bg-no-repeat"
-  style={{ backgroundImage: "url('/hero-desktop.png')" }}
+  className="min-h-screen flex items-center relative"
+  style={{
+    backgroundImage: "url('/hero-desktop.png')",
+    backgroundSize: "contain",      // show full image
+    backgroundPosition: "center top", // keep image below navbar
+    backgroundRepeat: "no-repeat",
+    paddingTop: "96px"              // navbar height space (adjust if needed)
+  }}
 >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
