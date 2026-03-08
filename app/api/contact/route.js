@@ -24,12 +24,23 @@ export async function POST(req) {
     await transporter.sendMail({
       from: "jagannathan2810@gmail.com",
       to: email,
-      subject: "Thanks for contacting Jagannathan",
+      subject: "Thank You — I’ll Be in Touch Shortly",
       html: `
-        <h2>Hi ${name},</h2>
-        <p>Thanks for reaching out. I received your message and will reply soon.</p>
-        <br/>
-        <p>— Jagannathan</p>
+        <h2>Hello ${name},</h2>
+
+<p>
+Thank you for getting in touch through my portfolio website.
+I have received your message successfully and will review it shortly.
+</p>
+
+<p>
+I’ll get back to you as soon as possible. I appreciate your interest and
+look forward to connecting with you.
+</p>
+
+<br/>
+
+<p>Best regards,<br/>Jagannathan</p>
       `
     });
 
