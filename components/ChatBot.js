@@ -3,91 +3,66 @@ import { useState } from "react";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [stepIndex, setStepIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
 
-  const [messages, setMessages] = useState([
-    { role: "bot", text: "Hi 👋 I'm Jagannathan's AI assistant. Ask me anything!" }
-  ]);
+  const steps = [
+    {
+      question: "What type of project do you need?",
+      options: ["E-commerce", "Portfolio", "Blog", "Custom Web App"],
+    },
+    {
+      question: "What is your budget?",
+      options: ["₹10k–₹25k", "₹25k–₹50k", "₹50k–₹1L", "₹1L+"],
+    },
+    {
+      question: "What is your timeline?",
+      options: ["1 week", "2–4 weeks", "1–2 months", "Flexible"],
+    },
+    {
+      question: "Do you need backend?",
+      options: ["Yes", "No", "Not sure"],
+    },
+  ];
 
-  const [input, setInput] = useState("");
+  const handleOptionClick = (option) => {
+    const newAnswers = [...answers, option];
+    setAnswers(newAnswers);
 
-  const sendMessage = async () => {
-  if (!input.trim()) return;
-
-  const userMsg = { role: "user", text: input };
-
-  setMessages((prev) => [...prev, userMsg]);
-  setInput("");
-
-  const res = await fetch("/api/chat", {
-    method: "POST",
-    body: JSON.stringify({ message: input }),
-  });
-
-  const data = await res.json();
-
-  setMessages((prev) => [
-    ...prev,
-    { role: "bot", text: data.reply },
-  ]);
-};
+    if (stepIndex < steps.length - 1) {
+      setStepIndex(stepIndex + 1);
+    } else {
+      alert("✅ Thank you! We will contact you soon.");
+      console.log("Collected Data:", newAnswers);
+    }
+  };
 
   return (
     <>
       {/* Floating Button */}
-     <div
-  onClick={() => setIsOpen(!isOpen)}
-  className="fixed bottom-6 left-6 z-[9999] bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
->
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-6 left-6 z-[9999] bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer"
+      >
         💬
       </div>
 
-      {/* Chatbox */}
-{isOpen && (
-  <div className="fixed bottom-24 left-6 z-[9999] w-80 bg-white rounded-xl shadow-xl p-4 flex flex-col pointer-events-auto">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-2">
-            <h2 className="font-semibold">Chat Assistant</h2>
-            <button onClick={() => setIsOpen(false)}>❌</button>
-          </div>
+      {isOpen && (
+        <div className="fixed bottom-24 left-6 z-[9999] w-80 bg-white p-4 rounded-xl shadow-lg">
+          <h3 className="font-semibold mb-2">
+            {steps[stepIndex].question}
+          </h3>
 
-          {/* Messages */}
-          <div className="h-64 overflow-y-auto text-sm border p-2 rounded">
-            {messages.map((m, i) => (
-              <p
+          <div className="flex flex-col gap-2">
+            {steps[stepIndex].options.map((opt, i) => (
+              <button
                 key={i}
-                className={`my-2 ${
-                  m.role === "user" ? "text-right" : "text-left"
-                }`}
+                onClick={() => handleOptionClick(opt)}
+                className="bg-blue-100 hover:bg-blue-200 p-2 rounded"
               >
-                <span
-                  className={`inline-block px-3 py-2 rounded-lg ${
-                    m.role === "user"
-                      ? "bg-blue-500 text-white"
-                      : "bg-gray-200 text-black"
-                  }`}
-                >
-                  {m.text}
-                </span>
-              </p>
+                {opt}
+              </button>
             ))}
-          </div>
-
-          {/* Input */}
-          <div className="flex mt-2">
-            <input
-            style={{ pointerEvents: "auto" }}
-              className="flex-1 border p-2 text-black rounded-l"
-              value={input}
-              placeholder="Type a message..."
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-            />
-            <button
-              onClick={sendMessage}
-              className="bg-blue-500 text-white px-4 rounded-r"
-            >
-              Send
-            </button>
           </div>
         </div>
       )}
