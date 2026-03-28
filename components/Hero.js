@@ -67,9 +67,9 @@ export default function Hero() {
               Hire Me
             </button>
 
-            <button className="px-8 py-3 rounded border border-white/40 hover:bg-white/10 transition">
+            {/* <button className="px-8 py-3 rounded border border-white/40 hover:bg-white/10 transition">
               View Work
-            </button>
+            </button> */}
           </div>
 
           <ContactModal open={open} setOpen={setOpen} />
