@@ -17,7 +17,8 @@ export async function POST(req) {
       from: email,
       to: "jagannathan2810@gmail.com",
       subject: `Portfolio Message from ${name}`,
-      text: message
+      text: message,
+      mail: email
     });
 
     // 💌 Auto Thank-You Email to USER
