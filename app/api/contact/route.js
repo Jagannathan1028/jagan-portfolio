@@ -13,7 +13,7 @@ export async function POST(req) {
     });
 
     // 📩 Email to YOU
-    await transporter.sendMail({
+    await transporter.sendMail({ 
       from: email,
       to: "jagannathan2810@gmail.com",
       subject: `Portfolio Message from ${name}`,
