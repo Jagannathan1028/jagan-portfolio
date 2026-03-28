@@ -11,7 +11,7 @@ export default function Home(){
  <>
   <Navbar/>
   <Hero/>
-  <ChatBot />
+ 
   
 
   <Section id="about" title="About Me">
@@ -153,6 +153,7 @@ export default function Home(){
 </Section>
 
       <WhatsAppButton />
+       <ChatBot />
   <Footer/>
  </>
  )

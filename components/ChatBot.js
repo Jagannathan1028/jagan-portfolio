@@ -37,16 +37,16 @@ export default function ChatBot() {
   return (
     <>
       {/* Floating Button */}
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
-      >
+     <div
+  onClick={() => setIsOpen(!isOpen)}
+  className="fixed bottom-6 left-6 z-[9999] bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
+>
         💬
       </div>
 
       {/* Chatbox */}
-      {isOpen && (
-        <div className="fixed bottom-24 left-6 w-80 bg-white rounded-xl shadow-xl p-4 flex flex-col">
+{isOpen && (
+  <div className="fixed bottom-24 left-6 z-[9999] w-80 bg-white rounded-xl shadow-xl p-4 flex flex-col pointer-events-auto">
           {/* Header */}
           <div className="flex justify-between items-center mb-2">
             <h2 className="font-semibold">Chat Assistant</h2>
@@ -78,6 +78,7 @@ export default function ChatBot() {
           {/* Input */}
           <div className="flex mt-2">
             <input
+            style={{ pointerEvents: "auto" }}
               className="flex-1 border p-2 text-black rounded-l"
               value={input}
               placeholder="Type a message..."
