@@ -10,29 +10,26 @@ export default function ChatBot() {
 
   const [input, setInput] = useState("");
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
+  const sendMessage = async () => {
+  if (!input.trim()) return;
 
-    const userMsg = { role: "user", text: input };
+  const userMsg = { role: "user", text: input };
 
-    let botReply = "Sorry, I don't understand.";
+  setMessages((prev) => [...prev, userMsg]);
+  setInput("");
 
-    const text = input.toLowerCase();
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    body: JSON.stringify({ message: input }),
+  });
 
-    if (text.includes("skills")) {
-      botReply =
-        "Jagannathan works with Angular, Java Spring Boot, .NET APIs, SQL, and Azure.";
-    } else if (text.includes("contact")) {
-      botReply =
-        "You can contact Jagannathan using the Hire Me button or WhatsApp.";
-    } else if (text.includes("projects")) {
-      botReply =
-        "He built Hospital Management, Grocery Shopping, and Portfolio websites.";
-    }
+  const data = await res.json();
 
-    setMessages((prev) => [...prev, userMsg, { role: "bot", text: botReply }]);
-    setInput("");
-  };
+  setMessages((prev) => [
+    ...prev,
+    { role: "bot", text: data.reply },
+  ]);
+};
 
   return (
     <>
