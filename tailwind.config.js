@@ -1,6 +1,15 @@
-
-module.exports={
- content:["./app/**/*.{js,jsx}","./components/**/*.{js,jsx}"],
- theme:{extend:{colors:{accent:"#22d3ee",accent2:"#f97316"}}},
- plugins:[]
-}
+module.exports = {
+  content: ["./app/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
+  theme: {
+    extend: {
+      colors: {
+        accent: "#22d3ee",
+        accent2: "#f97316",
+      },
+      fontFamily: {
+        orbitron: ["Orbitron", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
