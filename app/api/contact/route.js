@@ -3,10 +3,9 @@ import OpenAI from "openai";
 
 export const dynamic = "force-dynamic";
 
-// ✅ OpenAI Setup
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAIClient() {
+  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+}
 
 // ✅ Portfolio Context
 const portfolioData = `
@@ -32,7 +31,7 @@ export async function POST(req) {
 
     // 🧠 If chatbot message exists → AI mode
     if (body.message && !body.email) {
-      const response = await openai.chat.completions.create({
+      const response = await getOpenAIClient().chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
           { role: "system", content: portfolioData },
